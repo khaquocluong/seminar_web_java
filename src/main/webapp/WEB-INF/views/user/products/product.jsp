@@ -139,7 +139,7 @@ Body Section
 						</div>
 					</div>
 					<div class="span7">
-						<h3>Name of the Item [$140.00]</h3>
+						<h3>${ product.name }</h3>
 						<hr class="soft" />
 
 						<form class="form-horizontal qtyFrm">
