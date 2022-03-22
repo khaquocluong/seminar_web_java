@@ -121,15 +121,7 @@ Body Section
 						<div id="myCarousel" class="carousel slide cntr">
 							<div class="carousel-inner">
 								<div class="item active">
-									<a href="#"> <img src="assets/img/a.jpg" alt=""
-										style="width: 100%"></a>
-								</div>
-								<div class="item">
-									<a href="#"> <img src="assets/img/b.jpg" alt=""
-										style="width: 100%"></a>
-								</div>
-								<div class="item">
-									<a href="#"> <img src="assets/img/e.jpg" alt=""
+									<a href="#"> <img src="<c:url value ="/assets/user/img/${ product.img }"/>" alt=""
 										style="width: 100%"></a>
 								</div>
 							</div>
@@ -144,7 +136,9 @@ Body Section
 
 						<form class="form-horizontal qtyFrm">
 							<div class="control-group">
-								<label class="control-label"><span>$140.00</span></label>
+								<label class="control-label"><span>
+								<fmt:formatNumber type="number" groupingUsed="true" value="${ product.price }" /> ₫
+								</span></label>
 								<div class="controls">
 									<input type="number" min="0" value ="0" class="span6" >
 								</div>
@@ -161,12 +155,7 @@ Body Section
 									</select>
 								</div>
 							</div>
-							
-							<h4>100 items in stock</h4>
-							<p>Nowadays the lingerie industry is one of the most
-								successful business spheres. Nowadays the lingerie industry is
-								one of ...
-							<p>
+							<p>${ product.title }<p>
 								<button type="submit" class="shopBtn">
 									<span class=" icon-shopping-cart"></span> Add to cart
 								</button>
@@ -177,145 +166,33 @@ Body Section
 
 
 				<ul id="productDetail" class="nav nav-tabs">
-					<li class="active"><a href="#home" data-toggle="tab">Product
-							Details</a></li>
-					<li class=""><a href="#profile" data-toggle="tab">Related
-							Products </a></li>
+					<li class="active"><a href="#home" data-toggle="tab">Chi tiết sản phẩm</a></li>
+					<li class=""><a href="#profile" data-toggle="tab">Sản phẩm liên quan</a></li>
 					
 				</ul>
 				<div id="myTabContent" class="tab-content tabWrapper">
 					<div class="tab-pane fade active in" id="home">
-						<h4>Product Information</h4>
-						<table class="table table-striped">
-							<tbody>
-								<tr class="techSpecRow">
-									<td class="techSpecTD1">Color:</td>
-									<td class="techSpecTD2">Black</td>
-								</tr>
-								<tr class="techSpecRow">
-									<td class="techSpecTD1">Style:</td>
-									<td class="techSpecTD2">Apparel,Sports</td>
-								</tr>
-								<tr class="techSpecRow">
-									<td class="techSpecTD1">Season:</td>
-									<td class="techSpecTD2">spring/summer</td>
-								</tr>
-								<tr class="techSpecRow">
-									<td class="techSpecTD1">Usage:</td>
-									<td class="techSpecTD2">fitness</td>
-								</tr>
-								<tr class="techSpecRow">
-									<td class="techSpecTD1">Sport:</td>
-									<td class="techSpecTD2">122855031</td>
-								</tr>
-								<tr class="techSpecRow">
-									<td class="techSpecTD1">Brand:</td>
-									<td class="techSpecTD2">Shock Absorber</td>
-								</tr>
-							</tbody>
-						</table>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-						<p>Raw denim you probably haven't heard of them jean shorts
-							Austin. Nesciunt tofu stumptown aliqua, retro synth master
-							cleanse. Mustache cliche tempor, williamsburg carles vegan
-							helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-							synth. Cosby sweater eu banh mi, qui irure terry richardson ex
-							squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
-							cardigan american apparel, butcher voluptate nisi qui.</p>
-
+						${ product.details }
 					</div>
 					<div class="tab-pane fade" id="profile">
-						<div class="row-fluid">
+					
+					<c:set var="countList" value ="${ productByIDCategory.size() }"/>
+					<c:if test="${ productByIDCategory.size()>6 }">
+						<c:set var="countList" value ="6"/>
+					</c:if>
+					<c:forEach var="item" items="${ productByIDCategory }" begin="1" end="${ countList }" varStatus="loop">
+		
+								<div class="row-fluid">
 							<div class="span2">
-								<img src="assets/img/d.jpg" alt="">
+								<img src="<c:url value ="/assets/user/img/${ item.img }"/>" alt="">
 							</div>
 							<div class="span6">
-								<h5>Product Name</h5>
-								<p>Nowadays the lingerie industry is one of the most
-									successful business spheres. We always stay in touch with the
-									latest fashion tendencies - that is why our goods are so
-									popular..</p>
+								<h5>${ item.name }</h5>
+								<p>${ item.title }</p>
 							</div>
 							<div class="span4 alignR">
 								<form class="form-horizontal qtyFrm">
-									<h3>$140.00</h3>
-									<label class="checkbox"> <input type="checkbox">
-										Adds product to compair
-									</label><br>
-									<div class="btn-group">
-										<a href="product_details.html" class="defaultBtn"><span
-											class=" icon-shopping-cart"></span> Add to cart</a> <a
-											href="product_details.html" class="shopBtn">VIEW</a>
-									</div>
-								</form>
-							</div>
-						</div>
-						<hr class="soft">
-						<div class="row-fluid">
-							<div class="span2">
-								<img src="assets/img/d.jpg" alt="">
-							</div>
-							<div class="span6">
-								<h5>Product Name</h5>
-								<p>Nowadays the lingerie industry is one of the most
-									successful business spheres. We always stay in touch with the
-									latest fashion tendencies - that is why our goods are so
-									popular..</p>
-							</div>
-							<div class="span4 alignR">
-								<form class="form-horizontal qtyFrm">
-									<h3>$140.00</h3>
-									<label class="checkbox"> <input type="checkbox">
-										Adds product to compair
-									</label><br>
+									<h3><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" /> ₫</h3>
 									<div class="btn-group">
 										<a href="product_details.html" class="defaultBtn"><span
 											class=" icon-shopping-cart"></span> Add to cart</a> <a
@@ -325,83 +202,11 @@ Body Section
 							</div>
 						</div>
 						<hr class="soft" />
-						<div class="row-fluid">
-							<div class="span2">
-								<img src="assets/img/d.jpg" alt="">
-							</div>
-							<div class="span6">
-								<h5>Product Name</h5>
-								<p>Nowadays the lingerie industry is one of the most
-									successful business spheres. We always stay in touch with the
-									latest fashion tendencies - that is why our goods are so
-									popular..</p>
-							</div>
-							<div class="span4 alignR">
-								<form class="form-horizontal qtyFrm">
-									<h3>$140.00</h3>
-									<label class="checkbox"> <input type="checkbox">
-										Adds product to compair
-									</label><br>
-									<div class="btn-group">
-										<a href="product_details.html" class="defaultBtn"><span
-											class=" icon-shopping-cart"></span> Add to cart</a> <a
-											href="product_details.html" class="shopBtn">VIEW</a>
-									</div>
-								</form>
-							</div>
-						</div>
-						<hr class="soft" />
-						<div class="row-fluid">
-							<div class="span2">
-								<img src="assets/img/d.jpg" alt="">
-							</div>
-							<div class="span6">
-								<h5>Product Name</h5>
-								<p>Nowadays the lingerie industry is one of the most
-									successful business spheres. We always stay in touch with the
-									latest fashion tendencies - that is why our goods are so
-									popular..</p>
-							</div>
-							<div class="span4 alignR">
-								<form class="form-horizontal qtyFrm">
-									<h3>$140.00</h3>
-									<label class="checkbox"> <input type="checkbox">
-										Adds product to compair
-									</label><br>
-									<div class="btn-group">
-										<a href="product_details.html" class="defaultBtn"><span
-											class=" icon-shopping-cart"></span> Add to cart</a> <a
-											href="product_details.html" class="shopBtn">VIEW</a>
-									</div>
-								</form>
-							</div>
-						</div>
-						<hr class="soften" />
-						<div class="row-fluid">
-							<div class="span2">
-								<img src="assets/img/d.jpg" alt="">
-							</div>
-							<div class="span6">
-								<h5>Product Name</h5>
-								<p>Nowadays the lingerie industry is one of the most
-									successful business spheres. We always stay in touch with the
-									latest fashion tendencies - that is why our goods are so
-									popular..</p>
-							</div>
-							<div class="span4 alignR">
-								<form class="form-horizontal qtyFrm">
-									<h3>$140.00</h3>
-									<label class="checkbox"> <input type="checkbox">
-										Adds product to compair
-									</label><br>
-									<div class="btn-group">
-										<a href="product_details.html" class="defaultBtn"><span
-											class=" icon-shopping-cart"></span> Add to cart</a> <a
-											href="product_details.html" class="shopBtn">VIEW</a>
-									</div>
-								</form>
-							</div>
-						</div>
+					</c:forEach>
+					
+					
+						
+						
 					</div>
 					
 					
@@ -409,6 +214,5 @@ Body Section
 
 			</div>
 		</div>
-	</div>
-	<!-- Body wrapper -->
+</div> <!-- Body wrapper -->
 </body>

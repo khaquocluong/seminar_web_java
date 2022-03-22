@@ -18,4 +18,8 @@ public class ProductServiceImpl implements IProductService{
 		List<ProductsDto> listProducts = productDao.GetProductByID(id);
 		return  listProducts.get(0);
 	}
+
+	public List<ProductsDto> GetProductByIDCategory(int id) {
+		return productDao.GetAllProductsByID(id);
+	}
 }
