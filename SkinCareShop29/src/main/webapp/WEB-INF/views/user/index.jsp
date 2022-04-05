@@ -18,7 +18,8 @@ Body Section
 					</c:forEach>
 					<li><a class="totalInCart" href="cart.html"><strong>Đã
 								mua<span class="badge badge-warning pull-right"
-								style="line-height: 18px;">$448.42</span>
+								style="line-height: 18px;">
+							<fmt:formatNumber type="number" groupingUsed="true" value="${ TotalPriceCart }"/> ₫</span>
 						</strong></a></li>
 				</ul>
 			</div>

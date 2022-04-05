@@ -12,7 +12,7 @@
 		<li class="active">Giỏ hàng</li>
     </ul>
 	<div class="well well-small">
-		<h1>Giỏ hàng <small class="pull-right"> 2 Sản phẩm trong giỏ hàng </small></h1>
+		<h1>Giỏ hàng <small class="pull-right"> ${ TotalQuantyCart } Sản phẩm trong giỏ hàng </small></h1>
 	<hr class="soften"/>	
 
 	<table class="table table-bordered table-condensed">
@@ -34,15 +34,15 @@
 					<tr>
 	                  <td><img width="100" src="<c:url value="/assets/user/img/${ item.value.product.img }"/>" alt=""></td>
 	                  <td>${ item.value.product.title }</td>
-	                  <td><span class="shopBtn" style="background-color: yellow;"><span class="icon-ok"></span></span> </td>
+	                  <td><span class="shopBtn" style="background-color: ${  item.value.product.code_color };"><span class="icon-ok"></span></span> </td>
 	                  <td><fmt:formatNumber type="number" groupingUsed="true" value="${  item.value.product.price }"/> ₫</td>
 	                  <td>
-						<input type="number" min="0" max="1000" class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text" value="${ item.value.quanty }">
+						<input type="number" min="0" max="1000" class="span1" style="max-width:34px" placeholder="1" id="quanty-cart-${  item.key }" size="16" type="text" value="${ item.value.quanty }">
 					  </td>
 	                  <td>
-	                  	<a href="<c:url value="/EditCart/1"/>" class="btn btn-mini btn-danger" type="button">
+	                  	<button data-id="${ item.key }"  class="btn btn-mini btn-danger edit-cart" type="button">
 	                  		<span class="icon-edit"></span>
-	                  	</a>
+	                  	</button>
 	                  </td>
 	                  <td>
 	                  	<a href="<c:url value="/DeleteCart/${ item.key }"/>" class="btn btn-mini btn-danger" type="button">
@@ -62,4 +62,16 @@
 </div>
 </div>
 </div>
+<content tag="script">
+<script>
+
+	$(".edit-cart").on("click", function(){
+		var id = $(this).data("id");
+		var quanty = $("#quanty-cart-"+id).val();
+		window.location = "EditCart/"+id+"/"+quanty;
+	});
+
+</script>
+</content>
+
 </body>
